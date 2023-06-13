@@ -1,0 +1,15 @@
+{
+  "name": "darwin-tests-chrome",
+  "version": "0.1.1",
+  "description": "Darwin Tests - Chrome Extension",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michal Banas",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0",
+    "prettier": "^2.8.8"
+  }
+}

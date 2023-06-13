@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+}
+h1 {
+  font-size: 16px;
+}
+ul {
+  padding-inline-start: 0;
+  border: 1px solid #ddd;
+}
+li {
+  padding-top: 2%;
+  list-style: none;
+}
+ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  cursor: grabbing;
+}
+
+@keyframes fillAnimation {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.copied {
+  background-image: linear-gradient(to right, #ffcc00, #ffcc00); /* Change to your desired color */
+  background-repeat: no-repeat;
+  animation: fillAnimation 1s;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 3px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+}
