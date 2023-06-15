@@ -1,9 +1,6 @@
+import { queries } from "./data/source/queries.js"
+
 document.addEventListener("DOMContentLoaded", () => {
-  const queries = [
-    "?darwin_mock_test=MULTICITY_LIMIT__on",
-    "?darwin_mock_test=NUM_OF_PASSENGERS_PRICE__on",
-    "?darwin_mock_test=QUICK_FILTERS__on",
-  ]
   const queriesList = document.getElementById("queries")
 
   if (queriesList) {
