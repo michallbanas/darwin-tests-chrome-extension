@@ -1,6 +1,7 @@
 :root {
   --default-white: #ffffff;
   --product-light: #e1f4f3;
+  --product-normal: #00a58e;
   --product-dark: #007a69;
   --cloud-light: #f5f7f9;
   --cloud-normal: #e8edf1;
@@ -12,8 +13,8 @@ body {
   background-color: var(--default-white);
   color: var(--ink-dark);
   padding: 10px;
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
 }
 h1 {
   font-size: 16px;
@@ -22,11 +23,15 @@ h1 {
 
 ul {
   padding-inline-start: 0;
+  overflow: auto;
+  height: 300px;
 }
 
 li {
   list-style: none;
   margin: 0.5em 0;
+  display: flex;
+  align-items: center;
 }
 
 ul li {
@@ -37,7 +42,7 @@ ul li {
 }
 
 li:hover {
-  cursor: pointer;
+  cursor: default;
 }
 
 @keyframes fillAnimation {
@@ -53,7 +58,7 @@ li:hover {
   background-image: linear-gradient(to right, var(--product-light), var(--product-light));
   background-repeat: no-repeat;
   animation: fillAnimation 1s;
-  font-size: 0.7rem;
+  font-size: 12px;
 }
 
 footer {
@@ -70,4 +75,23 @@ footer {
 footer p {
   font-size: 12px;
   cursor: default;
+}
+
+#copy-button,
+#add-button {
+  background-color: var(--product-dark);
+  border: none;
+  border-radius: 6px;
+  color: var(--cloud-light);
+  font-size: 11px;
+  text-decoration: none;
+  margin-left: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+}
+
+#text-span {
+  flex-grow: 1;
 }
