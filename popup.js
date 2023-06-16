@@ -46,12 +46,3 @@ function animateListItem(listItem, query, message) {
     listItem.textContent = query
   }, 1000)
 }
-
-const heartIcon = document.getElementById("heart-icon")
-
-heartIcon.addEventListener("click", () => {
-  heartIcon.textContent = "♥"
-  setTimeout(() => {
-    heartIcon.textContent = "♡"
-  }, 1000)
-})
