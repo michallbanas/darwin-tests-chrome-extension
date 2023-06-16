@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const listItem = createListItem(query)
         listItem.addEventListener("click", () => {
           copyQueryToClipboard(query)
-          animateListItem(listItem, query, "Copied")
+          animateListItem(listItem, query, "Copied\u00A0\u00A0🎉")
         })
         queriesList.appendChild(listItem)
       })
