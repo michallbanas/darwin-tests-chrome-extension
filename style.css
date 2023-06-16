@@ -1,31 +1,43 @@
+:root {
+  --default-white: #ffffff;
+  --product-light: #e1f4f3;
+  --product-dark: #007a69;
+  --cloud-light: #f5f7f9;
+  --cloud-normal: #e8edf1;
+  --ink-dark: #252a31;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--default-white);
+  color: var(--ink-dark);
   padding: 10px;
   width: 500px;
   height: 300px;
 }
 h1 {
   font-size: 16px;
-}
-ul {
-  padding-inline-start: 0;
-  border: 1px solid #ddd;
-}
-li {
-  padding-top: 2%;
-  list-style: none;
-}
-ul li {
-  padding: 8px 16px;
-  border-bottom: 1px solid #ddd;
+  text-align: center;
 }
 
-ul li:last-child {
-  border-bottom: none;
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+
+ul li {
+  padding: 0.8em 1.6em;
+  border: 1px solid var(--cloud-normal);
+  border-radius: 1em;
+  box-shadow: 0 0.25em 0 -0.133em var(--cloud-normal);
 }
 
 li:hover {
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 @keyframes fillAnimation {
@@ -38,9 +50,10 @@ li:hover {
 }
 
 .copied {
-  background-image: linear-gradient(to right, #ffcc00, #ffcc00); /* Change to your desired color */
+  background-image: linear-gradient(to right, var(--product-light), var(--product-light));
   background-repeat: no-repeat;
   animation: fillAnimation 1s;
+  font-size: 0.7rem;
 }
 
 footer {
@@ -48,9 +61,10 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--product-dark);
   padding: 3px;
   text-align: center;
+  color: var(--cloud-light);
 }
 
 footer p {
