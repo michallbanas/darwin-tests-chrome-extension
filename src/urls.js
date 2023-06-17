@@ -1,11 +1,13 @@
+/*global chrome*/
+
 export async function updateUrlWithQuery(query) {
   try {
     return await new Promise((resolve, reject) => {
-      chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (tabs.length === 0) {
           reject(new Error("No active tab found"))
         }
-        const tab = tabs[0]
+        const [tab] = tabs
         const url = new URL(tab.url)
         const decodedQuery = decodeURIComponent(query).replace("?", "")
         const existingParams = url.searchParams.toString()

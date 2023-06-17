@@ -4,7 +4,7 @@ import { updateUrlWithQuery } from "./src/urls.js"
 import { createListItem } from "./src/dom.js"
 
 function addQueryToUrl(query) {
-  updateUrlWithQuery(query).catch(error => {
+  updateUrlWithQuery(query).catch((error) => {
     console.error("Unable to update URL:", error)
   })
 }
@@ -14,7 +14,7 @@ function copyQueryToClipboard(query) {
     .then(() => {
       console.log(`Yay! 🥳 Text copied to clipboard: ${query}`)
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Unable to copy text:", error)
     })
 }
@@ -24,7 +24,7 @@ function initializeApp() {
 
   if (queriesList) {
     try {
-      queries.forEach(query => {
+      queries.forEach((query) => {
         const listItem = createListItem(query, copyQueryToClipboard, addQueryToUrl)
         queriesList.appendChild(listItem)
       })
