@@ -1,1 +1,5 @@
-export const queries = ["?mock_test=NAME_1_on", "?mock_test=NAME_2_on", "?mock_test=NAME_3_on"]
+export const queries = [
+  "?mock_test=I_NEED_COFFEE_on",
+  "?mock_test=ALIENS_EXIST_on",
+  "?mock_test=EASY_RIGHT_on",
+]
