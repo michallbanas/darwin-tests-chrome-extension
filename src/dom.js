@@ -36,6 +36,11 @@ export function createListItem(query, copyQueryToClipboard, addQueryToUrl) {
 export function getTruncatedText(query) {
   const queryLengthMax = 80
   const equalIndex = query.indexOf("=")
+
+  if (!query.includes("mock")) {
+    return query
+  }
+
   const displayText =
     query.length < queryLengthMax
       ? query.substring(equalIndex + 1)
