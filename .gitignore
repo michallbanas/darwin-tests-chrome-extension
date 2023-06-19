@@ -1,6 +1,10 @@
 #Folders
 node_modules/
 data/source/
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 #Files
 .DS_Store
+
