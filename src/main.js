@@ -1,7 +1,7 @@
-import { queries } from "./data/source/queries.js"
-import { copyTextToClipboard } from "./src/clipboard.js"
-import { updateUrlWithQuery } from "./src/urls.js"
-import { createListItem } from "./src/dom.js"
+import { queries } from "../data/source/queries.js"
+import { copyTextToClipboard } from "./clipboard.js"
+import { updateUrlWithQuery } from "./urls.js"
+import { createListItem } from "./dom.js"
 
 function addQueryToUrl(query) {
   updateUrlWithQuery(query).catch((error) => {
