@@ -1,10 +1,10 @@
 {
   "name": "darwin-tests-chrome",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Darwin Tests - Chrome Extension",
-  "main": "popup.js",
+  "main": "src/main.js",
   "scripts": {
-    "dev": ""
+    "test": "npx playwright test --ui"
   },
   "author": "Michal Banas",
   "license": "ISC",
