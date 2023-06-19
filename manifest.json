@@ -1,13 +1,18 @@
 {
   "manifest_version": 3,
   "name": "Darwin Tests Extension",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Displays and copies darwin tests",
-  "permissions": ["clipboardWrite", "tabs"],
+  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting"],
   "action": {
     "default_popup": "popup.html"
   },
   "icons": {
     "128": "./design/icon128.png"
+  },
+  "minimum_chrome_version": "93",
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
   }
 }

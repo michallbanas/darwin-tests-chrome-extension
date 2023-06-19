@@ -1,14 +1,15 @@
 {
   "name": "darwin-tests-chrome",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Darwin Tests - Chrome Extension",
   "main": "popup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": ""
   },
   "author": "Michal Banas",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.35.1",
     "cypress": "^12.14.0",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
