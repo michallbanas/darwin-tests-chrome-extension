@@ -4,14 +4,23 @@
     <title>Query Extension</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="src/dark-mode.js" , type="module"></script>
     <script src="src/main.js" type="module"></script>
   </head>
   <body>
-    <h1>Darwin A/B Tests</h1>
-    <ul id="queries"></ul>
+    <header>
+      <h1>Darwin A/B Tests</h1>
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" aria-label="auto" aria-live="polite" />
+        <label for="toggle" class="toggle"></label>
+      </div>
+    </header>
+    <main>
+      <ul id="queries"></ul>
+    </main>
     <footer>
       <p>
-        Darwin A/B Tests, version 0.6.4, developed and tested with <span id="heart-icon">♡</span> by
+        Darwin A/B Tests, version 0.7.0, developed and tested with <span id="heart-icon">♡</span> by
         Michal Banas
       </p>
     </footer>

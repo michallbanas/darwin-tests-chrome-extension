@@ -1,21 +1,39 @@
 :root {
-  --default-white: #ffffff;
+  --default: #ffffff;
   --product-light: #e1f4f3;
   --product-normal: #00a58e;
   --product-dark: #007a69;
   --cloud-light: #f5f7f9;
   --cloud-normal: #e8edf1;
-  --ink-dark: #252a31;
+  --ink: #252a31;
+}
+
+[data-theme="dark"] {
+  --default: #252a31;
+  --product-light: #4f5e71;
+  --product-normal: #00a58e;
+  --product-dark: #007a69;
+  --cloud-light: #f5f7f9;
+  --cloud-normal: #4f5e71;
+  --ink: #f5f7f9;
 }
 
 body {
   font-family: Helvetica, sans-serif;
-  background-color: var(--default-white);
-  color: var(--ink-dark);
+  background-color: var(--default);
+  color: var(--ink);
   padding: 10px;
   width: 600px;
-  height: 400px;
+  height: 380px;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.5em;
+}
+
 h1 {
   font-size: 16px;
   text-align: center;
@@ -23,8 +41,9 @@ h1 {
 
 ul {
   padding-inline-start: 0;
-  overflow: auto;
-  height: 300px;
+  overflow: scroll;
+  height: 310px;
+  margin-block-start: 0;
 }
 
 li {
@@ -35,7 +54,7 @@ li {
 }
 
 ul li {
-  padding: 0.8em 1.6em;
+  padding: 0.6em 1.6em;
   border: 1px solid var(--cloud-normal);
   border-radius: 1em;
   box-shadow: 0 0.25em 0 -0.133em var(--cloud-normal);
@@ -58,7 +77,7 @@ li:hover {
   background-image: linear-gradient(to right, var(--product-light), var(--product-light));
   background-repeat: no-repeat;
   animation: fillAnimation 1s;
-  font-size: 12px;
+  height: 24px;
 }
 
 footer {
@@ -94,4 +113,43 @@ footer p {
 
 #text-span {
   flex-grow: 1;
+}
+
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 19px;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 19px;
+}
+
+.toggle::before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#toggle:checked + .toggle {
+  background-color: var(--product-dark);
+}
+
+#toggle:checked + .toggle:before {
+  transform: translateX(16px);
 }

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Darwin Tests Extension",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "action": {
     "default_popup": "popup.html"
   },
@@ -16,5 +16,5 @@
   },
   "homepage_url": "https://www.michalbanas.dev/",
   "minimum_chrome_version": "93",
-  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting"]
+  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting", "storage"]
 }
