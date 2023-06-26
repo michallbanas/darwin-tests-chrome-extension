@@ -1,18 +1,21 @@
 {
   "manifest_version": 3,
   "name": "Darwin Tests Extension",
-  "version": "0.6.2",
-  "description": "Displays and copies darwin tests",
-  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting"],
+  "version": "0.6.3",
   "action": {
     "default_popup": "popup.html"
   },
+  "default_locale": "en",
+  "description": "Displays and copies darwin AB tests",
   "icons": {
     "128": "./design/icon128.png"
   },
-  "minimum_chrome_version": "93",
+  "author": "banas.michal@icloud.com",
   "background": {
     "service_worker": "service-worker.js",
     "type": "module"
-  }
+  },
+  "homepage_url": "https://www.michalbanas.dev/",
+  "minimum_chrome_version": "93",
+  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting"]
 }
