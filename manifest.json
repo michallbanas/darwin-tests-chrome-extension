@@ -1,11 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Darwin Tests Extension",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "action": {
     "default_popup": "popup.html"
   },
-  "default_locale": "en",
   "description": "Displays and copies darwin AB tests",
   "icons": {
     "128": "./design/icon128.png"
