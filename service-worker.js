@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.action.setTitle({ title: "Click to open Darwin Test Extension" })
   chrome.contextMenus.create({
     id: "extension-version",
-    title: "Darwin Test Extension v0.6.4",
+    title: "Darwin Test Extension v0.7.0",
     contexts: ["all"],
   })
 
@@ -21,4 +21,12 @@ chrome.contextMenus.onClicked.addListener((info) => {
       url: "https://github.com/michallbanas/darwin-tests-chrome-extension",
     })
   }
+})
+
+chrome.storage.local.set({ key: "value" }).then(() => {
+  console.log("Great! The value is set 🤝")
+})
+
+chrome.storage.local.get(["key"]).then(() => {
+  console.log("Great! The value is retrieved 🤝")
 })
