@@ -33,7 +33,7 @@ reflectPreference()
 
 window.addEventListener("load", () => {
   reflectPreference()
-  document.querySelector("#toggle").addEventListener("click", changeTheme)
+  document.querySelector("#toggle")?.addEventListener("click", changeTheme)
 })
 
 window
