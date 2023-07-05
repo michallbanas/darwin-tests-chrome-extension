@@ -1,7 +1,16 @@
+/*global chrome*/
+
 import { queries } from "../data/source/queries.js"
 import { copyTextToClipboard } from "./clipboard.js"
 import { updateUrlWithQuery } from "./urls.js"
 import { createListItem } from "./dom.js"
+import {
+  getSessionStorageItem,
+  formatSessionStorageItem,
+  clearSessionStorageContent,
+  appendListItems,
+} from "./session-storage.js"
+import { sessionStorageKey } from "../data/source/sessionStorage.js"
 
 function addQueryToUrl(query) {
   updateUrlWithQuery(query).catch((error) => {
@@ -37,3 +46,39 @@ function initializeApp() {
 }
 
 document.addEventListener("DOMContentLoaded", initializeApp)
+document
+  .getElementById("getSessionStorageButton")
+  .addEventListener("click", handleGetSessionStorage)
+
+function disabledButton() {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const [tab] = tabs
+    if (tab.url === "chrome://newtab/" || tab.url === "chrome://extensions/") {
+      const button = document.getElementById("getSessionStorageButton")
+      button.disabled = true
+      button.style.display = "none"
+    }
+  })
+}
+
+disabledButton()
+
+async function handleGetSessionStorage() {
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+    const result = await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      function: getSessionStorageItem,
+      args: [sessionStorageKey],
+    })
+
+    const sessionStorageData = result[0].result
+    const formattedData = formatSessionStorageItem(sessionStorageData)
+
+    const sessionStorageItem = document.getElementById("sessionStorageContent")
+    clearSessionStorageContent(sessionStorageItem)
+    appendListItems(formattedData, sessionStorageItem)
+  } catch (error) {
+    console.error("An error during loading session storage:", error)
+  }
+}
