@@ -3,6 +3,7 @@
   "version": "0.7.0",
   "description": "Darwin Tests - Chrome Extension",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "test": "npx playwright test --ui"
   },

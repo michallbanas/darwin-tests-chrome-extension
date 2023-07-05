@@ -13,7 +13,7 @@ Like this:
 4. Click "Load unpacked"
 5. Select the `darwin-tests-chrome-extension` folder
 
-## Before using
+## Before using - add the tests
 
 1. In `data` folder, create a folder named `source` and put the `queries.js` file in it. This file contains the queries that will be used to fetch the tests.
 2. You can see in example folder how the `queries.js` file should look like.
@@ -25,6 +25,14 @@ export const queries = [
   "?mock_test=ALIENS_EXIST_on",
   "?mock_test=EASY_RIGHT_on",
 ]
+```
+
+## Before using - session storage
+
+1. In `data` folder, navigate to the `source` folder and put the `sessionStorage.js` file in it. This file contains the session storage key that will be used to fetch the running tests.
+
+```javascript
+export const sessionStorageKey = "your_sessionStorageKey_here"
 ```
 
 ## How to use

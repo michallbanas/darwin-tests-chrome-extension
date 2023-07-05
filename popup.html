@@ -10,6 +10,12 @@
   <body>
     <header>
       <h1>Darwin A/B Tests</h1>
+      <div class="storageCheck">
+        <button id="getSessionStorageButton" popovertarget="sessionStorageContent">
+          Get running A/B tests
+        </button>
+        <div id="sessionStorageContent" popover></div>
+      </div>
       <div class="toggle-container">
         <input type="checkbox" id="toggle" aria-label="auto" aria-live="polite" />
         <label for="toggle" class="toggle"></label>

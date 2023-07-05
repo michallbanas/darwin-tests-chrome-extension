@@ -15,6 +15,6 @@
     "type": "module"
   },
   "homepage_url": "https://www.michalbanas.dev/",
-  "minimum_chrome_version": "93",
-  "permissions": ["clipboardWrite", "contextMenus", "tabs", "scripting", "storage"]
+  "minimum_chrome_version": "114",
+  "permissions": ["activeTab", "clipboardWrite", "contextMenus", "tabs", "scripting", "storage"]
 }
