@@ -3,7 +3,7 @@
 Hey there! 👋 This is a Chrome extension that will help you to easily access the test values you need. You can copy the test to clipboard or add the test to the URL 🎉
 
 Like this:
-![Example of Darwin Tests Extension](./design/darwinTestsChromeExtension.png)
+![Example of Darwin Tests Extension](./design/chromeExtension.png)
 
 ## Installation
 
