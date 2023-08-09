@@ -41,7 +41,7 @@ h1 {
 
 ul {
   padding-inline-start: 0;
-  overflow: scroll;
+  overflow-y: scroll;
   height: 310px;
   margin-block-start: 0;
 }
