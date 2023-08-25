@@ -1,21 +1,23 @@
 {
   "name": "darwin-tests-chrome",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Darwin Tests - Chrome Extension",
   "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "test": "npx playwright test --ui"
+    "test": "npx playwright test --ui",
+    "check-updates": "npx npm-check-updates",
+    "update-all": "npx npm-check-updates -u"
   },
   "author": "Michal Banas",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.36.2",
-    "eslint": "^8.46.0",
+    "@playwright/test": "^1.37.1",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.2"
   },
   "dependencies": {
-    "npm-check-updates": "^16.10.18"
+    "npm-check-updates": "^16.12.2"
   }
 }
