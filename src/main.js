@@ -3,7 +3,7 @@
 import { queries } from "../data/source/queries.js"
 import { copyTextToClipboard } from "./clipboard.js"
 import { updateUrlWithQuery } from "./urls.js"
-import { createListItem } from "./dom.js"
+import { createListItem, toggleHeartIcon } from "./dom.js"
 import {
   getSessionStorageItem,
   formatSessionStorageItem,
@@ -62,6 +62,7 @@ function disabledButton() {
 }
 
 disabledButton()
+toggleHeartIcon()
 
 async function handleGetSessionStorage() {
   try {

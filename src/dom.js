@@ -38,7 +38,8 @@ export function getTruncatedText(query) {
   const equalIndex = query.indexOf("=")
 
   if (!query.includes("mock")) {
-    return query
+    const sliceQuery = query.slice(0, 60)
+    return sliceQuery
   }
 
   const displayText =
@@ -63,11 +64,13 @@ function animateListItem(listItem, message, textSpan, copyButton, addButton) {
   }, ANIMATION_DURATION)
 }
 
-const heartIcon = document.getElementById("heart-icon")
+export function toggleHeartIcon() {
+  const heartIcon = document.getElementById("heart-icon")
 
-heartIcon.addEventListener("click", () => {
-  heartIcon.textContent = "♥"
-  setTimeout(() => {
-    heartIcon.textContent = "♡"
-  }, ANIMATION_DURATION)
-})
+  heartIcon.addEventListener("click", () => {
+    heartIcon.textContent = "♥"
+    setTimeout(() => {
+      heartIcon.textContent = "♡"
+    }, ANIMATION_DURATION)
+  })
+}
