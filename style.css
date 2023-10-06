@@ -65,9 +65,18 @@ li:hover {
 }
 
 #searchInput {
-  padding: 0.6em;
+  padding: 0.5em;
   border-radius: 0.8em;
-  border-style: none;
+  border: solid;
+  border-color: var(--product-dark);
+  font-size: 1em;
+}
+
+[data-theme="dark"] #searchInput {
+  padding: 0.5em;
+  border-radius: 0.8em;
+  border: solid;
+  border-color: var(--ink);
   font-size: 1em;
 }
 
@@ -171,12 +180,13 @@ footer p {
 
 #getSessionStorageButton {
   background-color: var(--product-dark);
-  border: none;
+  border: solid;
+  border-color: var(--product-dark);
   border-radius: 0.8em;
   color: var(--cloud-light);
   font-size: 1em;
   text-decoration: none;
-  padding: 0.6em;
+  padding: 0.5em;
   cursor: pointer;
   display: flex;
   gap: 10px;
