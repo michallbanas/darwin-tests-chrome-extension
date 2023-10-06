@@ -64,6 +64,15 @@ li:hover {
   cursor: default;
 }
 
+#searchInput {
+  padding: 0.5em;
+  border-radius: 0.8em;
+}
+
+#noResultsMessage {
+  display: flex;
+}
+
 @keyframes fillAnimation {
   0% {
     background-size: 0% 100%;

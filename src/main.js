@@ -11,6 +11,7 @@ import {
   appendListItems,
 } from "./session-storage.js"
 import { sessionStorageKey } from "../data/source/sessionStorage.js"
+import { setupLiveSearch } from "./search.js"
 
 function addQueryToUrl(query) {
   updateUrlWithQuery(query).catch((error) => {
@@ -43,6 +44,8 @@ function initializeApp() {
   } else {
     console.error("Unable to find the queries list element")
   }
+
+  setupLiveSearch()
 }
 
 document.addEventListener("DOMContentLoaded", initializeApp)
