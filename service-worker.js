@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.action.setTitle({ title: "Click to open Darwin Test Extension" })
   chrome.contextMenus.create({
     id: "extension-version",
-    title: "Darwin Test Extension v0.8.3",
+    title: "Darwin Test Extension v0.8.5",
     contexts: ["all"],
   })
 
