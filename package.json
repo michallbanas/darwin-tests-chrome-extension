@@ -1,6 +1,6 @@
 {
   "name": "darwin-tests-chrome",
-  "version": "0.8.6",
+  "version": "0.9.0",
   "description": "Darwin Tests - Chrome Extension",
   "main": "src/main.js",
   "type": "module",
