@@ -1,6 +1,6 @@
 {
   "name": "darwin-tests-chrome",
-  "version": "0.8.6",
+  "version": "0.9.0",
   "description": "Darwin Tests - Chrome Extension",
   "main": "src/main.js",
   "type": "module",
@@ -12,13 +12,14 @@
   "author": "Michal Banas",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.41.1",
-    "eslint": "^8.56.0",
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.12",
+    "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.4",
-    "vitest": "^1.2.1"
+    "prettier": "^3.2.5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
-    "npm-check-updates": "^16.14.12"
+    "npm-check-updates": "^16.14.20"
   }
 }

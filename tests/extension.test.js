@@ -1,13 +1,11 @@
-import { test, expect } from "./fixtures"
+import { test, expect } from "./fixtures.js"
 import { queries } from "../data/source/queries.js"
 
-test.beforeEach(async ({ page, extensionId }) => {
-  await test.step("Before each: Set Dark Mode", async () => {
-    await page.addInitScript(() => {
-      window.localStorage.setItem("theme-preference", "dark")
-    })
-  })
+test.use({
+  colorScheme: "dark",
+})
 
+test.beforeEach(async ({ page, extensionId }) => {
   await test.step("Before each: Open extension", async () => {
     await page.goto(`chrome-extension://${extensionId}/popup.html`)
   })
