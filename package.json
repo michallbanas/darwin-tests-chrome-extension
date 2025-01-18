@@ -12,14 +12,14 @@
   "author": "Michal Banas",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.12",
-    "eslint": "^9.2.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.5",
-    "vitest": "^1.6.0"
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
+    "vitest": "^3.0.2"
   },
   "dependencies": {
-    "npm-check-updates": "^16.14.20"
+    "npm-check-updates": "^17.1.14"
   }
 }
